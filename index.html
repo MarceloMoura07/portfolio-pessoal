@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio Pessoal</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      background-color: #000;
+      padding: 4px;
+      margin: 0;
+    }
+    h1 {
+      text-align: center;
+      font-size: 35px;
+      color: goldenrod;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+
+    h2 {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: goldenrod;
+      font-size: 25px;
+      font-weight: bold;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid goldenrod;
+    }
+    .sombra {
+      text-shadow: 2px 2px 5px darkblue, 0 0 5px;
+    }
+
+    ul {
+      list-style-type: none; /*remove o marcador de lista*/
+      margin: 0px;
+      padding: 0px;
+      background-color: none;
+    }
+    li {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 25px;
+      font-weight: bold;
+      float: left;
+    }
+
+    li a {
+      display: block;
+      text-align: center;
+      color: whitesmoke;
+      padding: 8px 14px;
+      margin-left: 50px;
+      margin-right: 50px;
+      text-decoration: none;
+    }
+    li a:hover {
+      background-color: #7d7d7d;
+      color: goldenrod;
+    }
+    p {
+      color: white;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      font-size: 20px;
+      text-align: justify;
+    }
+    .container {
+      /* flexbox criado para dividir a tela com texto e imagem*/
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .texto {
+      width: 50%;
+    }
+    .imagem {
+      width: 70%;
+    }
+    img {
+      border-radius: 20px;
+      max-width: 100%;
+      height: auto;
+    }
+    .menu {
+      top: 0;
+      width: 100%;
+    }
+
+    /* Media Query para Tablets */
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .texto,
+      .imagem {
+        width: 100%;
+      }
+      li {
+        float: none;
+        text-align: center;
+        margin: 10px 0;
+      }
+      li a {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    /* Media Query para Smartphones */
+    @media screen and (max-width: 320px) {
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .imagem {
+        display: none; /* Esconder a imagem em telas muito pequenas */
+      }
+      ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      li {
+        width: 100%;
+        margin: 5px 0;
+      }
+      .menu ul li a {
+        padding: 10px 0;
+      }
+    }
+  </style>
+
+  <body>
+    <nav class="menu">
+      <h1 class="sombra">MARCELO FRANCISCO DE OLIVEIRA MOURA</h1>
+      <hr />
+      <ul>
+        <li><a href="index.html">QUEM SOU EU?</a></li>
+        <li><a href="formacao.html">FORMAÇÃO ACADÊMICA</a></li>
+        <li><a href="portfolio.html">PORTFÓLIO</a></li>
+        <li><a href="contato.html">CONTATO</a></li>
+      </ul>
+    </nav>
+    <br /><br /><br />
+    <hr />
+    <br />
+    <h2 class="sombra">QUEM SOU EU?</h2>
+
+    <div class="container">
+      <div class="texto">
+        <p>
+          Meu nome é Marcelo, sou nascido em 18/04/1978, natural de Campinas,
+          interior de São Paulo. Sou o mais velho de três irmãos.
+        </p>
+        <p>
+          Sou casado há 22 anos com a Raquel e nós temos dois lindos filhos. O
+          Isaque tem 16 anos e o João Pedro tem 4 anos.
+        </p>
+        <p>
+          Moro à 5 anos na cidade de Cosmópolis, uma pequena cidade próximo de
+          Campinas, onde eu sou pastor em uma Igreja Batista. Eu já exerço o
+          ministério pastoral à 18 anos.
+        </p>
+        <p>Gosto de ler, assistir séries e viajar.</p>
+
+        <p>
+          Há cerca de 1 ano comecei a estudar programação por causa do meu
+          encanto com a área de tecnologia.
+        </p>
+      </div>
+      <div class="imagem">
+        <!--Troca da imagem quando diminui a tela-->
+        <picture>
+          <source media="(max-width: 1050px)" srcset="imagens/família_1.jpeg" />
+
+          <img src="imagens/família.jpg" alt="foto da minha família" />
+        </picture>
+      </div>
+    </div>
+    <br /><br /><br />
+    <h5
+      style="
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 12px;
+        color: goldenrod;
+      "
+      ;
+    >
+      <hr />
+      Desenvolvido como trabalho da disciplina de Fundamentos da Programação Web
+    </h5>
+  </body>
+</html>

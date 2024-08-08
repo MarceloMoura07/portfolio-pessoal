@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio Pessoal</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      background-color: #000;
+      padding: 4px;
+      margin: 0px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 35px;
+      color: goldenrod;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+
+    h2 {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: goldenrod;
+      font-size: 25px;
+      font-weight: bold;
+    }
+    h3 {
+      font-family: "Courier New", Courier, monospace;
+      background-color: #255adf;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    h3:hover {
+      background-color: goldenrod;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid goldenrod;
+    }
+    .sombra {
+      text-shadow: 2px 2px 5px darkblue, 0 0 5px;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+      background-color: none;
+    }
+    li {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 25px;
+      font-weight: bold;
+      float: left;
+    }
+
+    li a {
+      display: block;
+      text-align: center;
+      color: whitesmoke;
+      padding: 8px 14px;
+      margin-left: 50px;
+      margin-right: 50px;
+      text-decoration: none;
+    }
+    li a:hover {
+      background-color: #7d7d7d;
+      color: goldenrod;
+    }
+    p {
+      color: white;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      font-size: 20px;
+      text-align: justify;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .texto {
+      width: 50%;
+    }
+    .imagem {
+      width: 70%;
+    }
+    img {
+      border-radius: 20px;
+      max-width: 100%;
+      height: auto;
+    }
+    .menu {
+      top: 0;
+      width: 100%;
+    }
+    a {
+      text-decoration: none;
+      color: darkcyan;
+      text-align: center;
+    }
+    /* Media Query para Tablets */
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .texto,
+      .imagem {
+        width: 100%;
+      }
+      li {
+        float: none;
+        text-align: center;
+        margin: 10px 0;
+      }
+      li a {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    /* Media Query para Smartphones */
+    @media screen and (max-width: 320px) {
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .imagem {
+        display: none; /* Esconder a imagem em telas muito pequenas */
+      }
+      ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      li {
+        width: 100%;
+        margin: 5px 0;
+      }
+      .menu ul li a {
+        padding: 10px 0;
+      }
+    }
+  </style>
+
+  <body>
+    <nav class="menu">
+      <h1 class="sombra">MARCELO FRANCISCO DE OLIVEIRA MOURA</h1>
+      <hr />
+      <ul>
+        <li><a href="index.html">QUEM SOU EU?</a></li>
+        <li><a href="formacao.html">FORMAÇÃO ACADÊMICA</a></li>
+        <li><a href="portfolio.html">PORTFÓLIO</a></li>
+        <li><a href="contato.html">CONTATO</a></li>
+      </ul>
+    </nav>
+    <br /><br /><br />
+    <hr />
+    <br />
+    <h2 class="sombra">PORTFÓLIO</h2>
+
+    <div class="container">
+      <div class="texto">
+        <p>
+          Meu primeiro projeto em Programação foi uma rede social de alunos da
+          Hashtag. Esse projeto é ensinado pelo professor em aula e os alunos
+          devem copiar 100% o que o professor ensinou.
+        </p>
+        <p>
+          Embora eu não tenha tido tempo ainda de refazer o projeto dado em
+          aula, ele me serviu de ideia para a Atividade Extensionista I da
+          Uninter.
+        </p>
+        <p>
+          A partir desse modelo e com mais conhecimento, quero desenvolver uma
+          rede social de moradores do meu município para postarem os problemas
+          do bairro e cidade..
+        </p>
+      </div>
+      <div class="imagem">
+        <!--Imagem e botão linkados com o site-->
+        <a
+          href="https://primeiroprojetoflask-production.up.railway.app/"
+          ;
+          target="_blank"
+          ;
+        >
+          <h3>Página do Site</h3>
+          <picture>
+            <source
+              media="(max-width: 1050px)"
+              srcset="imagens/projeto_python.jpg"
+            />
+            <img
+              src="imagens/projeto_python.jpg"
+              alt="imagem do primeiro site que fiz"
+            />
+          </picture>
+
+          />
+        </a>
+      </div>
+    </div>
+    <br /><br /><br />
+    <h5
+      style="
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 12px;
+        color: goldenrod;
+      "
+      ;
+    >
+      <hr />
+      Desenvolvido como trabalho da disciplina de Fundamentos da Programação Web
+    </h5>
+  </body>
+</html>

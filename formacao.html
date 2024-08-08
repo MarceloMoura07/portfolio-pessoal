@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfólio Pessoal</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      background-color: #000;
+      padding: 4px;
+      margin: 0px;
+    }
+    h1 {
+      text-align: center;
+      font-size: 35px;
+      color: goldenrod;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+
+    h2 {
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+      color: goldenrod;
+      font-size: 25px;
+      font-weight: bold;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid goldenrod;
+    }
+    .sombra {
+      text-shadow: 2px 2px 5px darkblue, 0 0 5px;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+      background-color: none;
+    }
+    li {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 25px;
+      font-weight: bold;
+      float: left;
+    }
+
+    li a {
+      display: block;
+      text-align: center;
+      color: whitesmoke;
+      padding: 8px 14px;
+      margin-left: 50px;
+      margin-right: 50px;
+      text-decoration: none;
+    }
+    li a:hover {
+      background-color: #7d7d7d;
+      color: goldenrod;
+    }
+    p {
+      color: white;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      font-size: 20px;
+      text-align: justify;
+    }
+    .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 90%;
+      margin: 0 auto;
+    }
+    .texto {
+      width: 50%;
+    }
+    .imagem {
+      width: 70%;
+    }
+    img {
+      border-radius: 20px;
+      max-width: 100%;
+      height: auto;
+    }
+    .menu {
+      top: 0;
+      width: 100%;
+    }
+    /* Media Query para Tablets */
+    @media screen and (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .texto,
+      .imagem {
+        width: 100%;
+      }
+      li {
+        float: none;
+        text-align: center;
+        margin: 10px 0;
+      }
+      li a {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    /* Media Query para Smartphones */
+    @media screen and (max-width: 320px) {
+      h1 {
+        font-size: 28px;
+      }
+      h2 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 16px;
+      }
+      .imagem {
+        display: none; /* Esconder a imagem em telas muito pequenas */
+      }
+      ul {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      li {
+        width: 100%;
+        margin: 5px 0;
+      }
+      .menu ul li a {
+        padding: 10px 0;
+      }
+    }
+  </style>
+
+  <body>
+    <nav class="menu">
+      <h1 class="sombra">MARCELO FRANCISCO DE OLIVEIRA MOURA</h1>
+      <hr />
+      <ul>
+        <li><a href="index.html">QUEM SOU EU?</a></li>
+        <li><a href="formacao.html">FORMAÇÃO ACADÊMICA</a></li>
+        <li><a href="portfolio.html">PORTFÓLIO</a></li>
+        <li><a href="contato.html">CONTATO</a></li>
+      </ul>
+    </nav>
+    <br /><br /><br />
+    <hr />
+    <br />
+    <h2 class="sombra">FORMAÇÃO ACADÊMICA</h2>
+
+    <div class="container">
+      <div class="texto">
+        <p>
+          Me formei no curso Bacharel em Teologia pela Faculdade Teológica
+          Batista de Campinas no ano de 2006. No mesmo ano fui consagrado
+          (habilitado) ao exercício do ministério pastoral.
+        </p>
+        <p>
+          Sou Pós Graduado em Plantação e Revitalização de Igrejas pelo
+          Seminário Teológico Presbiteriano do Sul do Brasil no ano de 2010.
+        </p>
+        <p>
+          Fui professor de Teologia Sistemática no Seminário Batista de Jundiaí
+          de 2015 a 2017.
+        </p>
+
+        <p>
+          Desde 2023 tenho feito alguns cursos livres na área de programação:
+          Lógica de Programação, Python, etc.
+        </p>
+        <p>
+          No momento estou cursando Análise e Desenvolvimento de Sistemas no
+          Centro Universitário Internacional Uninter.
+        </p>
+      </div>
+      <div class="imagem">
+        <picture>
+          <source media="(max-width: 1050px)" srcset="imagens/igreja.jpg" />
+          <img src="imagens/igreja.jpg" alt="foto minha ensinando na igreja" />
+        </picture>
+      </div>
+    </div>
+    <br /><br /><br />
+    <h5
+      style="
+        text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+          'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 12px;
+        color: goldenrod;
+      "
+      ;
+    >
+      <hr />
+      Desenvolvido como trabalho da disciplina de Fundamentos da Programação Web
+    </h5>
+  </body>
+</html>
